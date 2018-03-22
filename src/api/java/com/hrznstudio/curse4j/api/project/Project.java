@@ -1,6 +1,7 @@
 package com.hrznstudio.curse4j.api.project;
 
 import com.hrznstudio.curse4j.api.IDObject;
+import com.hrznstudio.curse4j.api.Image;
 import com.hrznstudio.curse4j.api.user.Member;
 
 import java.net.URL;
@@ -14,7 +15,7 @@ public interface Project extends IDObject {
 
     Type getType();
 
-    URL getIcon();
+    Image getIcon();
 
     Date getCreatedDate();
 
@@ -29,6 +30,8 @@ public interface Project extends IDObject {
     List<File> getFiles();
 
     List<File> getFiles(Version version);
+
+    File getFileByID(long fileId);
 
     File getRecommendedFile();
 
